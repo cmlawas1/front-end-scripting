@@ -1,0 +1,154 @@
+body, label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:1%;
+    background-color: #ede4d3;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1%;
+    margin: 0;
+}
+
+li {
+    background-color: rgb(96,79,69);
+    color:white;
+    font-weight: bold;
+    display: flex;
+    padding-left: 30px;
+    padding-right:30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    transition: all .2s ease-in;
+}
+
+li:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+label, input, textarea {
+    display: block;
+}
+
+label {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#namerank {
+    display: flex;
+    padding:0;
+    margin:0;
+}
+
+.namerank {
+    flex-grow: 1;
+}
+
+input[type=text], input[type=url], input[type=number], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(67, 67, 67);
+    border-radius: 4px;
+}
+
+input[type=button] {
+    border: 2px solid rgb(67, 67, 67);
+    border-radius: 4px;
+    background-color: rgb(67, 67, 67);
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+button {
+    border: 1px solid #e64a55;
+    border-radius: 4px;
+    background-color: #e64a55;
+    color: white;
+    padding: 8px 20px;
+    margin: 8px 0;
+}
+
+#flex-container {
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+}
+
+.flexbox {
+    flex-wrap: wrap;
+}
+
+#form {
+    padding:1%
+}
+
+#flex-food {
+    display:flex;
+    padding:1%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    counter-set: foodcount;
+}
+
+.food {
+    width: 20%;
+    background-color: #ffbdbd;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+
+.food::before {
+    counter-increment:foodcount;
+    content: "#" counter(foodcount);
+}
+
+.food-pic {
+    max-width:100%;
+    max-height:100%;
+    width: 150px;
+    object-fit: contain;
+}
+
+.food-name {
+    font-weight: bolder;
+}
+
+.food-description {
+    font-size: small;
+}
+
+#navig {
+    display: flex;
+    flex-direction:column;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+#content {
+    flex-grow: 6;
+    flex-direction: column;
+}
+
+#ads {
+    background-color: rgb(96,79,69);
+    flex-grow: 1;
+    text-align: center;
+    flex-shrink: 0;
+    padding:1%
+}
+
+.ads {
+    width: 150px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top:2%;
+    padding-bottom:2%;
+}

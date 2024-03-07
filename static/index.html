@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+
+    <body>
+        <div id="flex-container">
+            <!-- navigation box -->
+            <div class = "flexbox" id = "navig">
+                <a href="localhost:3000/"><li>FAVORITE FOOD</li></a>
+                <a href="localhost:3000/songs"><li>FAVORITE SONGS</li></a>
+                <a href="localhost:3000/quotes"><li>FAVORITE QUOTES</li></a>
+            </div>
+
+            <!-- center box -->
+            <div class = "flexbox" id = "content">
+                <div id = "form">
+                    <form name="myForm" id="myForm" action="/">
+                        <!-- flexbox for name and rank -->
+                        <div id = "namerank">
+                            <!-- input for name -->
+                            <label for = "name" class = "namerank">
+                                Food Name
+                                <input type = "text" id="name" required minlength="1"/>
+                            </label>
+                        
+                            <!-- input for rank -->
+                            <label for = "rank" class = "namerank">
+                                Rank
+                                <input type = "number" id="rank" required min="1"/>
+                            </label>
+                        </div>
+
+                        <!-- input for description -->
+                        <label for = "desc">
+                            Description
+                            <textarea id="desc" rows="4" cols="50" required minlength="1" required></textarea>
+                        </label>
+    
+                        <!-- input for image -->
+                        <label for = "image">
+                            Link to food image
+                            <input type = "url" id="image" placeholder="https://example.com" pattern="https://.*" required/>
+                        </label>
+    
+                        <!-- submit button -->
+                        <input type = "button" onclick = "validateForm()" value="Add Food"/>
+                    </form>
+                </div>
+
+                <div id = "flex-food">
+                </div>
+            </div>
+            <!-- ads section -->
+            <div class = "flexbox" id = "ads">
+                <p style="color:white; font-weight: bold;">ADVERTISEMENTS</p>
+                <img class = "ads" src="https://i.pinimg.com/564x/34/f4/8f/34f48f5c56c938642b80b0555e5adf82.jpg"/><br/>
+                <img class = "ads" src="https://i.pinimg.com/564x/8a/b8/6c/8ab86cf530ee66ebdfe3960e97acf125.jpg"/><br/>
+                <img class = "ads" src="https://i.pinimg.com/736x/2c/e1/c7/2ce1c73a2b4ac1f10c4d23ec3616fa9b.jpg"/><br/>
+            </div>
+        </div>
+
+        <script src="./form.js"></script>
+    </body>
+</html>
